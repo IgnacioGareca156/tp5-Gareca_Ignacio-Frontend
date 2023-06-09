@@ -4,7 +4,7 @@
     </div>
     <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
       <div class="carousel-inner" >
-        <div class="carousel-item active col-xl-12 col-lg-12 col-md-12 col-sm-12 " *ngFor="let p of productos" >
+        <div class="carousel-item " *ngFor="let p of productos; let i = index" [class.active]="i === 0" >
           <div class="card " style="margin-left: 300px; margin-right :300px; width: 700px;; color: rgb(2, 3, 10);">
               <img src={{p.imagen}} class="d-block w-100 " style="width : 800px; height: 600px; " alt="imagen">
                   <div class="card-body"  >
@@ -13,12 +13,13 @@
                     <p class="card-text">PRECIO: {{p.precio}} $(ARS)</p>
                     <p style="text-align: center; font-family: fantasy;font-size: xx-large;;">********DESTACADO********</p>
                   </div>
+                  
          </div>      
-      <button class="carousel-control-prev btn-dark" type="button" style="color: black;" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <button class="carousel-control-prev btn-dark" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next btn-dark" type="button" style="color: black;" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <button class="carousel-control-next btn-dark" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
