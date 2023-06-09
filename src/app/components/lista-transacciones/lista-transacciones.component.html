@@ -1,0 +1,26 @@
+<h1 style="text-align: center;">LISTA DE TRANSACCIONES</h1>
+<div class="container-fluid">
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">email</th>
+            <th scope="col">Moneda origen</th>
+            <th scope="col">Cantidad Origen</th>
+            <th scope="col">Moneda Destino</th>
+            <th scope="col">Cantidad Destino</th>
+            <th scope="col">Tasa De Conversion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of transacciones">
+            <th scope="row">{{t.emailCliente}}</th>
+            <td>{{t.monedaOrigen}}</td>
+            <td>{{t.cantidadOrigen}}</td>
+            <td>{{t.monedaDestino}}</td>
+            <td>{{t.cantidadDestino}}</td>
+            <td>{{t.tasaConversion}}</td>           
+          </tr>
+        </tbody>
+      </table>
+
+</div>

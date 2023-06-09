@@ -1,0 +1,102 @@
+  <div class="container-fluid"> 
+    <div class="row ">
+      <div class="table-responsive col-xl-8 col-lg-8 col-md-8 d-none d-sm-none d-md-block"  >
+        <table class="table" style="color: aliceblue;">
+          <thead>
+            <tr>               
+              <th scope="col" class="">#</th>
+              <th scope="col" class="text-center"><img src="https://cdn-icons-png.flaticon.com/128/197/197484.png" class="img-fluid">USD</th>               
+              <th scope="col" class="text-center"><img src="https://cdn-icons-png.flaticon.com/128/323/323344.png" class="img-fluid">EUR</th>
+              <th scope="col" class="text-center"><img src="https://cdn-icons-png.flaticon.com/128/197/197604.png" class="img-fluid">JPN</th>
+              <th scope="col" class="text-center"><img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" class="img-fluid">GBP</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <th scope="row" class="text-center"><img src="https://cdn-icons-png.flaticon.com/128/197/197484.png" class="img-fluid">USD</th>             
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><img src="https://cdn-icons-png.flaticon.com/128/323/323344.png" class="img-fluid">EUR</th>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><img src="https://cdn-icons-png.flaticon.com/128/197/197604.png" class="img-fluid">JPN</th>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+
+            </tr>
+            <tr>
+              <th scope="row" class="text-center"><img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" class="img-fluid">GBP</th>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+              <td class="text-center">1000</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+      <form class=" bg-secondary">
+        <div class="mb-4 container-fluid bg-primary">
+          <h3 class="mb-3" style="color: aliceblue; font-family:monospace;">Conversor de Divisas</h3>
+          <div class="mb-3">
+            <label for="amountInput" class="form-label" style="color: aliceblue">Ingresar email</label>
+            <input type="email" [(ngModel)]="transaccion.emailCliente" name="emailCliente"class="form-control" id="amountInput" aria-describedby="amountHelp">
+            <div id="amountHelp" class="form-text" style="color: aliceblue">Cantidad que desea convertir</div>
+          </div>
+          <div class="mb-3">
+            <label for="amountInput" class="form-label" style="color: aliceblue">Ingresar cantidad</label>
+            <input type="number" [(ngModel)]="fromValue" name="fromValue"class="form-control" id="amountInput" aria-describedby="amountHelp">
+            <div id="amountHelp" class="form-text" style="color: aliceblue">Cantidad que desea convertir</div>
+          </div>
+          <div class="mb-3">
+            <label for="fromCurrencySelect" class="form-label" style="color: aliceblue;">De</label>
+            <select class="form-select" [(ngModel)]="fromType" name="fromType" id="fromCurrencySelect" aria-label="De">
+              <option selected>Elegir Moneda</option>
+              <option value="USD">($) Dolares EEUU</option>
+              <option value="EUR">(€) EURO</option>
+              <option value="GBP">(£) Libra Esterlina</option>
+              <option value="JPY">(JPY) yen</option>
+              <option value="ARS">(ARS) Peso Argentino</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="toCurrencySelect" class="form-label" style="color: aliceblue">A</label>
+            <select class="form-select" [(ngModel)]="toType" name="toType"id="toCurrencySelect" aria-label="A">
+              <option selected>Elegir Moneda</option>
+              <option value="USD">($) Dolares EEUU</option>
+              <option value="EUR">(€) EURO</option>
+              <option value="GBP">(£) Libra Esterlina</option>
+              <option value="JPY">(JPY) yen</option>
+              <option value="ARS">(ARS) Peso Argentino</option>
+            </select>
+          
+          </div>
+          <button type="button" class="btn btn-dark" style="color: aliceblue; font-family:inherit ;" (click)="convertir()">Convertir</button>
+          <div class="mt-3">
+            <label for="resultInput" class="form-label" style="color: aliceblue">Resultado: </label>
+            <h3 style="color: cornsilk;">{{total}}</h3>
+          </div>
+        </div>
+      </form>
+    </div>
+  
+      
+  </div>
+</div>
+
+

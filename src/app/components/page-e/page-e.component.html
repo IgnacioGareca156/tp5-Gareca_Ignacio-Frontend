@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <div class="mb-3 ">
+        <label for="ejemplo: iron man " class="form-label">Introducir ip :</label>
+        <input type="text" [(ngModel)]="texto" class="form-control" placeholder="ejemplo: iron man">
+        <button type="submit" class="btn btn-primary" (click)="buscarLibros()">Buscar</button>
+    </div>
+
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Id libro</th>
+          <th scope="col">Titulo de libro</th>
+          <th scope="col">tapa</th>
+          <th scope="col">autores</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let libro of libros">
+          <th scope="row"><button class="btn btn-light"  data-bs-toggle="modal" data-bs-target="#nuevoModal">{{libro.book_id}}</button></th>
+
+          <div class="modal" tabindex="-1" id="nuevoModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Detalles</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Rating : {{libro.rating}}</p>
+                  <p>Año: {{libro.year}}</p>
+                  <p>Ediciones creada: {{libro.created_editions}}</p>
+                  <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+          <td>{{libro.name}}</td>
+          <td><img src="{{libro.cover}}"></td>
+          <td><li *ngFor="let a of autores">{{a.libro}}</li></td>
+
+        </tr>
+        
+      </tbody>
+    </table>
+
+    
+
+    <!--  <div>
+ 
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                informacion de ip
+            </div>
+            <ul class="list-group list-group-flush">
+                
+                <li class="list-group-item">{{infoIp.city}}</li>
+              <li class="list-group-item">{{infoIp.country}}</li>
+              <div class="card-header">
+                informacion de la ubicacion de ip
+            </div>
+              <li class="list-group-item">{{infoIp.timezone.time}}</li>
+              <li class="list-group-item">{{infoIp.timezone.date}}</li>
+              <li class="list-group-item">{{infoIp.timezone.offset}}</li>
+            </ul>
+          </div>
+
+    </div> -->
+</div>
+

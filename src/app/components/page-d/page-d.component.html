@@ -1,0 +1,46 @@
+<div class="container">
+    <h1 class="text-center mb-4">BUSCADOR DE PELICULAS</h1>
+    <div>
+        <div class="mb-3">
+            <label for="ejemplo: iron man " class="form-label">Introducir Nombre de la pelicula :</label>
+            <input type="text" [(ngModel)]="titulo" class="form-control" placeholder="ejemplo: iron man">
+            <button type="submit" class="btn btn-primary" (click)="buscarMovie()">Buscar</button>
+        </div>
+
+        <!-- <div class="card " style="width: 18rem; color: rgb(7, 29, 153);" *ngFor="let p of movies">
+            <img src={{p.Poster}} class="card-img-top img-fluid" alt="...">
+            <div class="card-body"  >
+              <h5 class="card-title">{{p.Title}}</h5>
+              <p class="card-text">Cancion: {{p.Director}}</p>
+              <p class="card-text">Duracion: {{p.Actors}} (segundos)</p>
+              <p>Preview de la cancion:</p>
+            </div>
+          </div> -->
+
+        <div class="row">
+
+        <div class="col-md-5 text-center">
+            <img  src="{{movie.Poster}}" class="img-fluid er">       
+        </div >
+            <div class="col-md-7">
+                <h3 class="text-center">{{movie.Title}}</h3>
+                    <div  class="mt-4">
+                        <h5 style="color: darkblue; font-style: oblique;">Descripcion: </h5> 
+                        <p>{{movie.Plot}}</p>
+                        <h5 style="color: darkblue; font-style: oblique;">Directores: </h5>
+                        <p>{{movie.Director}}</p>
+                        <h5 style="color: darkblue; font-style: oblique;">Premios awards: </h5>
+                        <p>{{movie.Awards}}</p>
+                        <h5 style="color: darkblue; font-style: oblique;">Actores: </h5>
+                        <p>{{movie.Actors}}</p>
+                        <h5 style="color: darkblue; font-style: oblique;">Duracion: </h5>
+                        <p>{{movie.Runtime}}</p>
+                        <h5 style="color: darkblue; font-style: oblique;">Año de estreno:</h5>
+                        <p> {{movie.Year}}</p>
+                        <h5 style="color: darkblue; font-style: oblique;">Genero:</h5>
+                        <p> {{movie.Genre}}</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
