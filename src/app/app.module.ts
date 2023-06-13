@@ -13,6 +13,8 @@ import { PageDComponent } from './components/page-d/page-d.component';
 import { PageEComponent } from './components/page-e/page-e.component';
 import { FormProductoComponent } from './components/form-producto/form-producto.component';
 import { ListaTransaccionesComponent } from './components/lista-transacciones/lista-transacciones.component';
+import { FormTicketComponent } from './components/form-ticket/form-ticket.component';
+import { ListaTicketsComponent } from './components/lista-tickets/lista-tickets.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { ListaTransaccionesComponent } from './components/lista-transacciones/li
     PageDComponent,
     PageEComponent,
     FormProductoComponent,
-    ListaTransaccionesComponent
+    ListaTransaccionesComponent,
+    FormTicketComponent,
+    ListaTicketsComponent
   ],
   imports: [
     BrowserModule,
