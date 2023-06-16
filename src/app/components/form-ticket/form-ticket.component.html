@@ -1,1 +1,32 @@
-<p>form-ticket works!</p>
+<div class="container-fluid">
+    <h1 style="text-align: center;">FORMULARIO DE TICKETS</h1>
+    <div class="container">
+        <form>
+            <fieldset >
+              <legend>Ingresar informacion sobre los tickets</legend>
+              <div class="mb-3">
+                <label for="" class="form-label">Precio de Ticket:</label>
+                <input type="number" [(ngModel)]="ticket.precioTicket" name="precioTicket" class="form-control" placeholder="ingresar precio" required>
+              </div>
+              <div class="mb-3">
+                <label for=""  class="form-label">Fecha de Compra:</label>
+                <input type="text" [(ngModel)]="ticket.fechaCompra" name="fechaCompra" class="form-control" placeholder="dd/mm/AA" required>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Seleccione espectador:</label>
+                <select id="" [(ngModel)]="ticket.espectador" name="espectador" class="form-select">
+                  <option *ngFor="let e of espectadores" [ngValue]="e">{{e.nombre}}, {{e.apellido}}</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Seleccione categoria:</label>
+                <select [(ngModel)]="ticket.categoriaEspectador" name="categoriaEspectador" class="form-select" required>
+                  <option value="l">local</option>
+                  <option value="e">extranjero</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-success" (click)="crearTicket()">Guardar</button> <button class="btn btn-primary" (click)="modificarTicket()">actualizar</button>
+            </fieldset>
+          </form>
+    </div>
+</div>

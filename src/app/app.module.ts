@@ -15,6 +15,7 @@ import { FormProductoComponent } from './components/form-producto/form-producto.
 import { ListaTransaccionesComponent } from './components/lista-transacciones/lista-transacciones.component';
 import { FormTicketComponent } from './components/form-ticket/form-ticket.component';
 import { ListaTicketsComponent } from './components/lista-tickets/lista-tickets.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ListaTicketsComponent } from './components/lista-tickets/lista-tickets.
     FormProductoComponent,
     ListaTransaccionesComponent,
     FormTicketComponent,
-    ListaTicketsComponent
+    ListaTicketsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
